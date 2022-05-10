@@ -55,12 +55,15 @@
               for (let i = 0; i < payload.length; i++) {
                 let issue = payload[i];
 
+                console.log("issue.body", issue.body);
+
                 // Check if author is valid
                 let isValidAuthor =
                   ALLOW_NAMED_FROM_OTHERS ||
                   issue.user.login === issue.repository.owner.login;
 
                 if (issue.body == keyword && isValidAuthor) {
+                  console.log("issue.body == keyword", issue.body, keyword);
                   link = issue.title;
                   break;
                 }
@@ -83,6 +86,7 @@
             } else {
               if (isQuery) {
                 // Show where this link leads
+                console.log("title", title);
                 var element = document.getElementById("link");
                 element.textContent = link;
               } else {
