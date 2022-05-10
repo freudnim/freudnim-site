@@ -55,15 +55,17 @@
               for (let i = 0; i < payload.length; i++) {
                 let issue = payload[i];
 
-                console.log("issue.body", issue.body);
+                const issueBody = encodeURIComponent(issue.body);
+
+                console.log("issue.body", issueBody);
 
                 // Check if author is valid
                 let isValidAuthor =
                   ALLOW_NAMED_FROM_OTHERS ||
                   issue.user.login === issue.repository.owner.login;
 
-                if (issue.body == keyword && isValidAuthor) {
-                  console.log("issue.body == keyword", issue.body, keyword);
+                if (issueBody == keyword && isValidAuthor) {
+                  console.log("issueBody == keyword", issueBody, keyword);
                   link = issue.title;
                   break;
                 }
