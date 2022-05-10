@@ -22,15 +22,10 @@
         );
       }
 
-      function isNumeric(num) {
-        return !isNaN(num);
-      }
-
       function redirect() {
         var location = window.location;
-        var keyword = location.pathname.split("/")[PATH_SEGMENTS_TO_SKIP + 1];
-
-        var isQuery = location.href.substr(-1) == "?";
+        var issueNumber =
+          location.pathname.split("/")[PATH_SEGMENTS_TO_SKIP + 1];
         var homepage =
           location.protocol +
           "//" +
@@ -45,41 +40,23 @@
           try {
             var payload = JSON.parse(xhr.response);
             var message = payload.message;
-            if (isNumeric(keyword)) {
-              // Keyword refers to issue number
-              link = payload.title;
-            } else {
-              // Keyword refers to given name
-              for (let i = 0; i < payload.length; i++) {
-                let issue = payload[i];
-                if (issue.body == keyword) {
-                  link = issue.title;
-                  break;
-                }
-              }
-            }
+            var title = payload.title;
+
             // Workaround IE 11 lack of support for new URL()
             var url = document.createElement("a");
-            url.setAttribute("href", link);
+            url.setAttribute("href", title);
 
             // Invalid URLs includes invalid issue numbers, issue titles that are not URLs, and recursive destination URLs
             var isInvalidUrl =
               message === "Not Found" ||
-              !link ||
-              !isUrl(link) ||
+              !title ||
+              !isUrl(title) ||
               url.hostname === location.hostname;
 
             if (isInvalidUrl) {
-              // location.replace(homepage);
+              location.replace(homepage);
             } else {
-              if (isQuery) {
-                // Show where this link leads
-                var element = document.getElementById("link");
-                element.textContent = link;
-              } else {
-                // Forward to link
-                location.replace(title);
-              }
+              location.replace(title);
             }
           } catch (e) {
             location.replace(homepage);
@@ -89,23 +66,12 @@
         xhr.onerror = function () {
           location.replace(homepage);
         };
-
-        let api_url = GITHUB_ISSUES_LINK;
-        if (isNumeric(keyword)) {
-          // Get /issues/ID
-          api_url += keyword;
-        } else {
-          // Get all /issues
-          api_url = api_url.slice(0, -1);
-        }
-        xhr.open("GET", api_url);
+        xhr.open("GET", GITHUB_ISSUES_LINK + issueNumber);
         xhr.send();
       }
 
       redirect();
     </script>
   </head>
-  <body>
-    Links to <span id="link"></span>
-  </body>
+  <body></body>
 </html>
