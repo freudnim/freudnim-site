@@ -13,9 +13,6 @@
       var PATH_SEGMENTS_TO_SKIP = 0;
       var ALLOW_NAMED_FROM_OTHERS = true;
 
-      /**
-       * DO NOT TOUCH ANYTHING BELOW THIS COMMENT UNLESS YOU KNOW WHAT YOU ARE DOING
-       */
       function isUrl(url) {
         // Regex from https://stackoverflow.com/a/3809435, with a modification to allow for TLDs of up to 24 characters
         return /^https?:\/\/(www\.)?[-a-zA-Z0-9\u1F60-\uFFFF@:%._\+~#=]{2,256}\.[a-z]{2,256}\b([-a-zA-Z0-9\u1F60-\uFFFF@:%_\+.~#?&//=]*)/.test(
@@ -122,6 +119,16 @@
     </script>
   </head>
   <body>
-    Links to <span id="link"></span>
+    <img
+      src="kanna.gif"
+      style="
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 50px;
+        width: 50%;
+        max-width: 300px;
+      "
+    />
   </body>
 </html>
