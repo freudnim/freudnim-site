@@ -44,7 +44,6 @@
             var payload = JSON.parse(xhr.response);
             var message = payload.message;
             if (isNumeric(keyword)) {
-              console.log("is numeric");
               // Keyword refers to issue number
               link = payload.title;
             } else {
@@ -53,8 +52,6 @@
                 let issue = payload[i];
 
                 const issueBody = encodeURIComponent(issue.body);
-
-                console.log("issue.body", issueBody);
 
                 // Check if author is valid
                 let isValidAuthor =
@@ -80,6 +77,7 @@
               url.hostname === location.hostname;
 
             if (isInvalidUrl) {
+              console.log("isInvalidUrl");
               location.replace(homepage);
             } else {
               if (isQuery) {
@@ -93,8 +91,7 @@
               }
             }
           } catch (e) {
-            console.log("error", e);
-            // location.replace(homepage);
+            location.replace(homepage);
           }
         };
 
