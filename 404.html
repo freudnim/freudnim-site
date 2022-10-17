@@ -81,8 +81,14 @@
               location.replace(homepage);
             } else {
               if (isQuery) {
+                // add discord compatible embed
+                var meta = document.createElement("meta");
+                meta.content = link;
+                meta.property = "og:image";
+
                 // Show where this link leads
                 console.log("title", title);
+                document.getElementsByTagName("head")[0].appendChild(meta);
                 var element = document.getElementById("link");
                 element.textContent = link;
               } else {
