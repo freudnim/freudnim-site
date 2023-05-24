@@ -1,3 +1,4 @@
+// credits: https://dev.to/thedevdrawer/single-page-application-routing-using-hash-or-url-9jha
 const routes = {
   "/": {
     template: "/templates/index.html",
