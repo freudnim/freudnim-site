@@ -1,0 +1,149 @@
+/* Global styles */
+body {
+  background-color: #ededed;
+  font-family: "Segoe UI", sans-serif;
+  margin: 0;
+}
+
+/* Cover image */
+.cover-image {
+  position: relative;
+  height: 300px;
+  overflow: hidden;
+}
+
+.cover-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Nav bar */
+.nav-bar {
+  position: sticky;
+  top: 0;
+  background-color: #ededed;
+}
+
+.nav-bar ul {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-bar li {
+  list-style: none;
+}
+
+.nav-bar a {
+  display: block;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #333;
+  transition: background-color 0.3s ease;
+}
+
+.nav-bar a:hover {
+  /* color: #06c3c6; */
+  background-color: rgba(0, 0, 0, 0.1);
+  /* transition: opacity 0.3s ease-out, visibility 0.1s 0.1s linear; */
+}
+
+.nav-bar a.active {
+  background-color: #eee;
+}
+
+/* Content */
+.content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.disclaimer {
+  text-align: center;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+}
+
+.content h1 {
+  margin-top: 50px;
+  font-weight: 300;
+}
+
+.content h2 {
+  margin-top: 2em;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+.content h3 {
+  font-weight: 100;
+  letter-spacing: 0.2rem;
+  font-size: 0.9em;
+}
+
+.content p,
+ul,
+li {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.icon {
+  display: inline-block;
+  vertical-align: middle;
+  width: 1.25em;
+  height: 0.75em;
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 10px;
+  column-gap: 10px;
+}
+
+.emote {
+  width: 80px;
+  height: 80px;
+}
+
+.panel {
+  width: 300px;
+}
+
+.sticker {
+  width: 200px;
+}
+
+.halfbody,
+.fullbody,
+.refsheet {
+  max-width: 600px;
+  max-height: 600px;
+}
+
+.footer {
+  bottom: 0;
+  width: 100%;
+  /* background-color: red; */
+  /* padding: 50px; */
+  color: white;
+  text-align: center;
+}
+
+.footer a {
+  padding: 10px;
+  text-decoration: none;
+}
+
+.content ul {
+  list-style-type: disc;
+}
