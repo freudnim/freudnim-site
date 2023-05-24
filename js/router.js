@@ -40,13 +40,38 @@ document.addEventListener("click", (e) => {
 });
 
 const idToEmoteFolders = {
-  emotes: { path: "imgs/emotes", type: "emote" },
-  "animated-emotes": { path: "imgs/animated_emotes", type: "emote" },
-  stickers: { path: "imgs/animated_stickers", type: "sticker" },
-  panels: { path: "imgs/panels", type: "panel" },
-  halfbody: { path: "imgs/halfbody", type: "halfbody" },
-  fullbody: { path: "imgs/fullbody", type: "fullbody" },
-  refsheets: { path: "imgs/refsheets", type: "refsheet" },
+  emotes: { count: 11, path: "imgs/emotes", class: "emote", isAnimated: false },
+  "animated-emotes": {
+    count: 33,
+    path: "imgs/animated_emotes",
+    class: "emote",
+    isAnimated: true,
+  },
+  stickers: {
+    count: 8,
+    path: "imgs/animated_stickers",
+    class: "sticker",
+    isAnimated: true,
+  },
+  // panels: { count: 5, path: "imgs/panels", class: "panel", isAnimated: false },
+  halfbody: {
+    count: 6,
+    path: "imgs/halfbody",
+    class: "halfbody",
+    isAnimated: false,
+  },
+  fullbody: {
+    count: 1,
+    path: "imgs/fullbody",
+    class: "fullbody",
+    isAnimated: false,
+  },
+  refsheets: {
+    count: 3,
+    path: "imgs/refsheets",
+    class: "refsheet",
+    isAnimated: false,
+  },
 };
 
 const locationHandler = async () => {
@@ -73,19 +98,27 @@ const locationHandler = async () => {
 };
 
 function addImagesFromFolderToId(id, entry) {
-  const { path, type } = entry;
-  $.ajax({
-    url: path,
-    success: function (data) {
-      $(data)
-        .find("a")
-        .attr("href", function (i, val) {
-          if (val.match(/\.(jpe?g|png|gif)$/)) {
-            $(`#${id}`).append(`<img src=${val} class=${type} >`);
-          }
-        });
-    },
-  });
+  // This only works locally.
+  // const { path, type } = entry;
+  // $.ajax({
+  //   url: path,
+  //   success: function (data) {
+  //     $(data)
+  //       .find("a")
+  //       .attr("href", function (i, val) {
+  //         if (val.match(/\.(jpe?g|png|gif)$/)) {
+  //           $(`#${id}`).append(`<img src=${val} class=${type} >`);
+  //         }
+  //       });
+  //   },
+  // });
+  const parent = document.querySelector(`#${id}`);
+  for (let i = 1; i <= entry.count; i++) {
+    var img = document.createElement("img");
+    img.src = `${entry.path}\\${i}.${entry.isAnimated ? "gif" : "png"}`;
+    img.className = `${entry.class}`;
+    parent.appendChild(img);
+  }
 }
 
 // add an event listener to the window that watches for url changes
