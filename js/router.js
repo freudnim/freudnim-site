@@ -57,19 +57,19 @@ const idToEmoteFolders = {
   halfbody: {
     count: 6,
     path: "imgs/halfbody",
-    class: "halfbody",
+    class: "illustration",
     isAnimated: false,
   },
   fullbody: {
     count: 1,
     path: "imgs/fullbody",
-    class: "fullbody",
+    class: "illustration",
     isAnimated: false,
   },
   refsheets: {
     count: 3,
     path: "imgs/refsheets",
-    class: "refsheet",
+    class: "illustration",
     isAnimated: false,
   },
 };
@@ -92,8 +92,20 @@ const locationHandler = async () => {
   //   document
   //     .querySelector('meta[name="description"]')
   //     .setAttribute("content", route.description);
+
+  // dynamically add all images
   for (const [id, entry] of Object.entries(idToEmoteFolders)) {
     addImagesFromFolderToId(id, entry);
+  }
+
+  // allow for horizontal scrolling in illustrations
+  const scrollContainers = document.querySelectorAll(".carousel");
+  for (let i = 0; i < scrollContainers.length; i++) {
+    const container = scrollContainers[i];
+    container.addEventListener("wheel", (evt) => {
+      evt.preventDefault();
+      container.scrollLeft += evt.deltaY;
+    });
   }
 };
 
@@ -112,12 +124,19 @@ function addImagesFromFolderToId(id, entry) {
   //       });
   //   },
   // });
-  const parent = document.querySelector(`#${id}`);
+  const parent = document.getElementById(id);
   for (let i = 1; i <= entry.count; i++) {
     var img = document.createElement("img");
     img.src = `${entry.path}\\${i}.${entry.isAnimated ? "gif" : "png"}`;
     img.className = `${entry.class}`;
-    parent.appendChild(img);
+    var child = img;
+    if (entry.class === "illustration") {
+      var slide = document.createElement("div");
+      slide.className = "slide";
+      slide.appendChild(img);
+      child = slide;
+    }
+    parent.appendChild(child);
   }
 }
 

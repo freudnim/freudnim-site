@@ -123,11 +123,10 @@ li {
   width: 200px;
 }
 
-.halfbody,
-.fullbody,
-.refsheet {
-  max-width: 600px;
-  max-height: 600px;
+.illustration {
+  /* max-width: 600px;
+  max-height: 600px; */
+  height: 600px;
 }
 
 .footer {
@@ -147,4 +146,19 @@ li {
 
 .content ul {
   list-style-type: disc;
+}
+
+.carousel {
+  overflow-x: hidden;
+  overflow: scroll;
+  display: flex;
+  /* width: 100%; */
+  width: 80vw;
+
+  margin-left: calc(-1 * ((80vw - 100%) / 2));
+}
+
+.carousel .slide {
+  width: 100vw;
+  margin-left: 20px;
 }
