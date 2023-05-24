@@ -35,13 +35,13 @@ document.addEventListener("click", (e) => {
 });
 
 const idToEmoteFolders = {
-  emotes: { path: "/imgs/emotes", type: "emote" },
-  "animated-emotes": { path: "/imgs/animated_emotes", type: "emote" },
-  stickers: { path: "/imgs/animated_stickers", type: "sticker" },
-  panels: { path: "/imgs/panels", type: "panel" },
-  halfbody: { path: "/imgs/halfbody", type: "halfbody" },
-  fullbody: { path: "/imgs/fullbody", type: "fullbody" },
-  refsheets: { path: "/imgs/refsheets", type: "refsheet" },
+  emotes: { path: "imgs/emotes", type: "emote" },
+  "animated-emotes": { path: "imgs/animated_emotes", type: "emote" },
+  stickers: { path: "imgs/animated_stickers", type: "sticker" },
+  panels: { path: "imgs/panels", type: "panel" },
+  halfbody: { path: "imgs/halfbody", type: "halfbody" },
+  fullbody: { path: "imgs/fullbody", type: "fullbody" },
+  refsheets: { path: "imgs/refsheets", type: "refsheet" },
 };
 
 const locationHandler = async () => {
