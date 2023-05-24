@@ -1,4 +1,8 @@
-// credits: https://dev.to/thedevdrawer/single-page-application-routing-using-hash-or-url-9jha
+/** credits:
+ * https://dev.to/thedevdrawer/single-page-application-routing-using-hash-or-url-9jha
+ * https://blog.pshrmn.com/how-single-page-applications-work/
+ * https://fontawesomeicons.com/svg/icons/twitter
+ * */
 const routes = {
   "/": {
     template: "/templates/index.html",
