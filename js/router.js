@@ -6,18 +6,12 @@
 const routes = {
   "/": {
     template: "/templates/index.html",
-    // title: "Home",
-    // description: "This is the home page",
   },
   "/pricing": {
     template: "/templates/pricing.html",
-    // title: "About Us",
-    // description: "This is the about page",
   },
   "/tos": {
     template: "/templates/tos.html",
-    // title: "Contact Us",
-    // description: "This is the contact page",
   },
 };
 
@@ -42,7 +36,7 @@ document.addEventListener("click", (e) => {
 const idToEmoteFolders = {
   emotes: { count: 11, path: "imgs/emotes", class: "emote", isAnimated: false },
   "animated-emotes": {
-    count: 33,
+    count: 36,
     path: "imgs/animated_emotes",
     class: "emote",
     isAnimated: true,
