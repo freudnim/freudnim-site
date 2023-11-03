@@ -33,10 +33,10 @@ document.addEventListener("click", (e) => {
   route();
 });
 
-const idToEmoteFolders = {
-  emotes: { count: 11, path: "imgs/emotes", class: "emote", isAnimated: false },
+const idToFolders = {
+  emotes: { count: 17, path: "imgs/emotes", class: "emote", isAnimated: false },
   "animated-emotes": {
-    count: 36,
+    count: 41,
     path: "imgs/animated_emotes",
     class: "emote",
     isAnimated: true,
@@ -47,12 +47,18 @@ const idToEmoteFolders = {
     class: "sticker",
     isAnimated: true,
   },
-  // panels: { count: 5, path: "imgs/panels", class: "panel", isAnimated: false },
+  panels: {
+    count: 12,
+    path: "imgs/panels",
+    class: "panel",
+    isAnimated: false,
+  },
   halfbody: {
-    count: 6,
+    count: 9,
     path: "imgs/halfbody",
     class: "illustration",
     isAnimated: false,
+    reverseOrder: true,
   },
   fullbody: {
     count: 1,
@@ -88,7 +94,7 @@ const locationHandler = async () => {
   //     .setAttribute("content", route.description);
 
   // dynamically add all images
-  for (const [id, entry] of Object.entries(idToEmoteFolders)) {
+  for (const [id, entry] of Object.entries(idToFolders)) {
     addImagesFromFolderToId(id, entry);
   }
 
@@ -130,7 +136,11 @@ function addImagesFromFolderToId(id, entry) {
       slide.appendChild(img);
       child = slide;
     }
-    parent.appendChild(child);
+    if (entry.reverseOrder) {
+      parent.prepend(child);
+    } else {
+      parent.appendChild(child);
+    }
   }
 }
 
