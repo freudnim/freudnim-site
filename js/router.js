@@ -34,9 +34,9 @@ document.addEventListener("click", (e) => {
 });
 
 const idToFolders = {
-  emotes: { count: 17, path: "imgs/emotes", class: "emote", isAnimated: false },
+  emotes: { count: 18, path: "imgs/emotes", class: "emote", isAnimated: false },
   "animated-emotes": {
-    count: 41,
+    count: 42,
     path: "imgs/animated_emotes",
     class: "emote",
     isAnimated: true,
