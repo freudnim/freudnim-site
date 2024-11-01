@@ -1,7 +1,7 @@
 import { isValidUrl } from "./utils.js";
 
 const GITHUB_ISSUES_LINK =
-    "https://api.github.com/repos/freudnim/freudnim-url-shortener/issues";
+    "https://api.github.com/repos/freudnim/freudnim-site/issues";
 const PATH_SEGMENTS_TO_SKIP = 0;
 
 const location = window.location;
