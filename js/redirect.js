@@ -45,7 +45,6 @@ function redirect() {
             !isUrl(link) ||
             url.hostname === location.hostname;
 
-        console.log(link);
         if (isInvalidUrl) {
             location.replace(homepage);
         } else {
