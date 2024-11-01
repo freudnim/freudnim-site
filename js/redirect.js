@@ -1,4 +1,4 @@
-import { isUrl } from "./utils.js";
+import { isValidUrl } from "./utils.js";
 
 const GITHUB_ISSUES_LINK =
     "https://api.github.com/repos/freudnim/freudnim-url-shortener/issues";
@@ -43,7 +43,7 @@ if (keyword) {
             const isInvalidUrl =
                 message === "Not Found" ||
                 !link ||
-                !isUrl(link) ||
+                !isValidUrl(link) ||
                 url.hostname === location.hostname;
 
             if (isInvalidUrl) {
