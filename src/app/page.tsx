@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Footer from "../components/Footer";
+import Avatar from "@/components/Avatar";
 
 export default function Home() {
   return (
@@ -15,7 +16,9 @@ export default function Home() {
                 under construction ovo
               </p>
             </div>
-            <Image src="./kiri-closed.gif" alt="avatar closed" width={200} height={200} unoptimized />
+            <div className="pb-16">
+              <Avatar />
+            </div>
           </div>
         </main>
         <Footer />
