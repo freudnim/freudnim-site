@@ -58,7 +58,7 @@ const socialLinks: SocialLink[] = [
         ),
     },
     {
-        href: "/vgen_logo.svg",
+        href: "https://vgen.co/freudnim",
         ariaLabel: "VGen",
         icon: <Image src="/vgen_logo.svg" alt="VGen logo" width={25} height={25} className="dark:invert" unoptimized />,
     },
