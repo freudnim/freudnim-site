@@ -1,3 +1,3 @@
 # freudnim.co
 
-personal website for freudnim & url-shortener. next.js, tailwind, typescript.
+personal website for freudnim & url-shortener. built with next.js, tailwind, typescript.
