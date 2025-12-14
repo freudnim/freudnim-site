@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect } from "react";
-import { useParams } from "next/navigation";
 
 function isValidUrl(value: string) {
     try {
@@ -12,17 +11,14 @@ function isValidUrl(value: string) {
     }
 }
 
-export default function RedirectPage() {
-    const params = useParams();
-    const slug = params?.slug;
-    const keyword = Array.isArray(slug) ? slug[0] : slug;
+export default function RedirectHandler() {
 
     useEffect(() => {
+        const location = window.location;
+        const keyword = location.pathname.replace(/^\/+/, "");
         if (!keyword) return;
 
-        const location = window.location;
-        const homepage = `${location.protocol}//${location.hostname}${location.port ? ":" + location.port : ""
-            }/`;
+        const homepage = `${location.protocol}//${location.host}/`;
 
         const redirect = async () => {
             try {
@@ -49,7 +45,7 @@ export default function RedirectPage() {
         };
 
         redirect();
-    }, [keyword]);
+    }, []);
 
     return null; // this page does not render anything
 }
