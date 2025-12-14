@@ -65,6 +65,7 @@ export default function Footer() {
                     </svg>
                 </a>
 
+                {/* VGen */}
                 <a
                     href="/vgen_logo.svg"
                     aria-label="VGen"
@@ -80,6 +81,26 @@ export default function Footer() {
                         className="dark:invert"
                         unoptimized
                     />
+                </a>
+
+                {/* YouTube */}
+                <a
+                    href="https://www.youtube.com/@freudnim"
+                    aria-label="YouTube"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:opacity-70 transition-opacity"
+                >
+                    <svg
+                        width="25"
+                        height="25"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                        xmlns="http://www.w3.org/2000/svg"
+                        className="text-black dark:text-white"
+                    >
+                        <path d="M23.498 6.186a2.972 2.972 0 0 0-2.093-2.094C19.63 3.5 12 3.5 12 3.5s-7.63 0-9.405.592a2.972 2.972 0 0 0-2.093 2.094A31.56 31.56 0 0 0 0 12a31.56 31.56 0 0 0 .502 5.814 2.972 2.972 0 0 0 2.093 2.094C4.37 20.5 12 20.5 12 20.5s7.63 0 9.405-.592a2.972 2.972 0 0 0 2.093-2.094A31.56 31.56 0 0 0 24 12a31.56 31.56 0 0 0-.502-5.814ZM9.75 15.02V8.98l6.5 3.02-6.5 3.02Z" />
+                    </svg>
                 </a>
 
             </div>
