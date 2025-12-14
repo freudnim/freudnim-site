@@ -24,32 +24,32 @@ export default function RedirectPage() {
         const homepage = `${location.protocol}//${location.hostname}${location.port ? ":" + location.port : ""
             }/`;
 
-        fetch("https://api.github.com/repos/freudnim/freudnim-site/issues")
-            .then((res) => res.json())
-            .then((issues: any[]) => {
-                let link = "";
+        const redirect = async () => {
+            try {
+                const res = await fetch(
+                    "https://api.github.com/repos/freudnim/freudnim-site/issues"
+                );
+                const issues: any[] = await res.json();
 
-                for (const issue of issues) {
-                    if (encodeURIComponent(issue.body) === keyword) {
-                        link = issue.title;
-                        break;
-                    }
-                }
+                const matchedIssue = issues.find(
+                    (issue) => encodeURIComponent(issue.body) === keyword
+                );
 
-                try {
-                    const url = document.createElement("a");
-                    url.href = link;
+                const link = matchedIssue?.title ?? "";
+                const url = document.createElement("a");
+                url.href = link;
 
-                    const isInvalidUrl =
-                        !link || !isValidUrl(link) || url.hostname === location.hostname;
+                const isInvalidUrl =
+                    !link || !isValidUrl(link) || url.hostname === location.hostname;
 
-                    location.replace(isInvalidUrl ? homepage : link);
-                } catch {
-                    location.replace(homepage);
-                }
-            })
-            .catch(() => location.replace(homepage));
-    }, [params.slug]);
+                location.replace(isInvalidUrl ? homepage : link);
+            } catch {
+                window.location.replace(homepage);
+            }
+        };
+
+        redirect();
+    }, [keyword]);
 
     return null; // this page does not render anything
 }
