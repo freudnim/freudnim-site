@@ -87,8 +87,8 @@ const socialLinks: SocialLink[] = [
 
 export default function Footer() {
     return (
-        <footer className="w-full border-t border-zinc-200 dark:border-zinc-700 py-6 flex justify-center">
-            <div className="flex gap-6">
+        <div className="w-full pt-6" >
+            <footer className="flex justify-center gap-6 border-t border-zinc-200 dark:border-zinc-700 py-6">
                 {socialLinks.map((link) => (
                     <a
                         key={link.ariaLabel}
@@ -101,7 +101,7 @@ export default function Footer() {
                         {link.icon}
                     </a>
                 ))}
-            </div>
-        </footer>
+            </footer>
+        </div>
     );
 }
