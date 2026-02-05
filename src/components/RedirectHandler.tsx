@@ -12,7 +12,6 @@ function isValidUrl(value: string) {
 }
 
 export default function RedirectHandler() {
-
     useEffect(() => {
         const location = window.location;
         const keyword = location.pathname.replace(/^\/+/, "");
