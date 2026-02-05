@@ -1,3 +1,4 @@
+import ThemeToggle from "@/components/ThemeToggle";
 import Footer from "../components/Footer";
 import Avatar from "@/components/Avatar";
 
@@ -22,6 +23,7 @@ export default function Home() {
         </main>
         <Footer />
       </div>
+      <ThemeToggle />
     </div>
   );
 }
