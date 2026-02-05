@@ -1,6 +1,7 @@
 1:"$Sreact.fragment"
-2:I[39756,["./_next/static/chunks/ff1a16fafef87110.js","./_next/static/chunks/247eb132b7f7b574.js"],"default"]
-3:I[37457,["./_next/static/chunks/ff1a16fafef87110.js","./_next/static/chunks/247eb132b7f7b574.js"],"default"]
-4:I[47254,["./_next/static/chunks/4d0391caa71bfee7.js"],"default"]
-:HL["./_next/static/chunks/a2833193fdf8c45a.css","style"]
-0:{"buildId":"kSfceZI2yUgKbtMCNZlnW","rsc":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"./_next/static/chunks/a2833193fdf8c45a.css","precedence":"next"}]],["$","html",null,{"lang":"en","children":["$","body",null,{"className":"geist_a71539c9-module__T19VSG__variable geist_mono_8d43a2aa-module__8Li5zG__variable antialiased","children":["$","$L2",null,{"parallelRouterKey":"children","template":["$","$L3",null,{}],"notFound":[["$","$L4",null,{}],[]]}]}]}]]}],"loading":null,"isPartial":false}
+2:I[63178,["./_next/static/chunks/58689c96b0676c41.js"],"ThemeProvider"]
+3:I[39756,["./_next/static/chunks/ff1a16fafef87110.js","./_next/static/chunks/247eb132b7f7b574.js"],"default"]
+4:I[37457,["./_next/static/chunks/ff1a16fafef87110.js","./_next/static/chunks/247eb132b7f7b574.js"],"default"]
+5:I[47254,["./_next/static/chunks/58689c96b0676c41.js","./_next/static/chunks/4d0391caa71bfee7.js"],"default"]
+:HL["./_next/static/chunks/e0cc611cff66b090.css","style"]
+0:{"buildId":"uFfJTeBbgY9CG8F2Zf2Sk","rsc":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"./_next/static/chunks/e0cc611cff66b090.css","precedence":"next"}],["$","script","script-0",{"src":"./_next/static/chunks/58689c96b0676c41.js","async":true}]],["$","html",null,{"lang":"en","suppressHydrationWarning":true,"children":["$","body",null,{"className":"geist_a71539c9-module__T19VSG__variable geist_mono_8d43a2aa-module__8Li5zG__variable antialiased","children":["$","$L2",null,{"defaultTheme":"system","enableSystem":true,"children":["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}],"notFound":[["$","$L5",null,{}],[]]}]}]}]}]]}],"loading":null,"isPartial":false}
