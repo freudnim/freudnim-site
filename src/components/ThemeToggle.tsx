@@ -24,5 +24,4 @@ export default function ThemeToggle() {
                 <img className="w-13" src="/sun.png" />
             }
         </button>);
-
 }
