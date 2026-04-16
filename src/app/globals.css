@@ -7,3 +7,25 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+@layer components {
+  .background {
+    @apply bg-zinc-50 dark:bg-black;
+  }
+
+  .heading-text {
+    @apply text-black dark:text-zinc-50;
+  }
+
+  .subheading-text {
+    @apply text-zinc-600 dark:text-zinc-400;
+  }
+
+  .footer-border {
+    @apply border-t border-zinc-200 dark:border-zinc-700;
+  }
+
+  .footer-icon-color {
+    @apply text-black dark:text-white;
+  }
+}
