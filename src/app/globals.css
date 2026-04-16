@@ -10,7 +10,7 @@ body {
 
 @layer components {
   .background {
-    @apply bg-zinc-50 dark:bg-black;
+    @apply bg-zinc-50 dark:bg-gray-900;
   }
 
   .heading-text {

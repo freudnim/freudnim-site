@@ -17,7 +17,7 @@ export default function ThemeToggle() {
     return (
         <button
             onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-            className="fixed bottom-4 right-4 p-2 transform transition hover:scale-110 duration-300 z-50"
+            className="fixed top-4 left-4 p-2 transform transition hover:scale-110 duration-300 z-50"
         >
             {theme === "dark" ?
                 <img className="w-13" src="/moon.png" /> :
