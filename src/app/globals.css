@@ -10,11 +10,11 @@ body {
 
 @layer components {
   .background {
-    @apply bg-zinc-50 dark:bg-gray-900;
+    @apply bg-zinc-100 dark:bg-zinc-900;
   }
 
   .heading-text {
-    @apply text-black dark:text-zinc-50;
+    @apply text-zinc-950 dark:text-zinc-50;
   }
 
   .subheading-text {
@@ -22,10 +22,10 @@ body {
   }
 
   .footer-border {
-    @apply border-t border-zinc-200 dark:border-zinc-700;
+    @apply border-t-2 border-zinc-200 dark:border-zinc-700;
   }
 
   .footer-icon-color {
-    @apply text-black dark:text-white;
+    @apply text-zinc-950 dark:text-zinc-100;
   }
 }

@@ -9,8 +9,8 @@ export default function Home() {
         <main className="flex w-full flex-col justify-between">
           <div className="flex w-full flex-row justify-between">
             <div className="flex flex-col items-start gap-6 text-left sm:items-start sm:text-left">
-              <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight heading-text">
-                hello there | ˙ ᵕ˙ )ﾉﾞ
+              <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-wider heading-text">
+                hello there | ˙ ᵕ˙ )/
               </h1>
               <p className="max-w-md text-lg leading-8 subheading-text">
                 illustrator, animator, programmer
