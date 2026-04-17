@@ -1,8 +1,8 @@
-import Image from "next/image";
+import Link from "next/link";
 
 const links = [
-    // { href: "#home", label: "home" },
-    { href: "#about", label: "about" },
+    { href: "/", label: "home" },
+    { href: "/about", label: "about" },
     { href: "/comms", label: "comms" },
     { href: "/contact", label: "contact" },
     { href: "/shop", label: "shop" },
@@ -11,14 +11,11 @@ const links = [
 
 export default function Nav() {
     return (
-        <nav className="flex flex-row">
+        <nav className="flex flex-row gap-6 text-sm subheading-text mb-2">
             {links.map(({ href, label }) => (
-                <a key={href} href={href} className="transition-transform duration-200 ease-out hover:-translate-y-2">
-                    <span className="inline-block pr-2">
-                        {/* <Image src="/frog.png" alt="Frog" height={12} width={12} unoptimized /> */}
-                    </span>
+                <Link key={href} href={href} className="transition-all duration-200 ease-out hover:-translate-y-1 hover:opacity-100 opacity-70">
                     {label}
-                </a>
+                </Link>
             ))}
         </nav>
     );

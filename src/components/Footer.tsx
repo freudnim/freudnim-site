@@ -27,8 +27,6 @@ const Icon = ({
     );
 };
 
-
-
 const socialLinks: SocialLink[] = [
     {
         href: "https://twitter.com/freudnim",
@@ -74,8 +72,8 @@ const socialLinks: SocialLink[] = [
 
 export default function Footer() {
     return (
-        <div className="w-full pt-6" >
-            <footer className="flex justify-center gap-6 py-6 footer-border">
+        <div className="w-full pt-6">
+            <footer className="flex justify-center gap-9 py-6 footer-border">
                 {socialLinks.map((link) => (
                     <a
                         key={link.ariaLabel}
