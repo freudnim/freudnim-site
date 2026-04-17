@@ -20,8 +20,8 @@ export default function ThemeToggle() {
             className="fixed top-4 left-4 p-2 transform transition hover:scale-110 duration-300 z-50"
         >
             {theme === "dark" ?
-                <img className="w-13" src="/moon.png" /> :
-                <img className="w-13" src="/sun.png" />
+                <img className="w-10" src="/moon.png" /> :
+                <img className="w-10" src="/sun.png" />
             }
         </button>);
 }
