@@ -4,7 +4,7 @@ export default function About() {
             <img className="w-56 h-auto object-contain" src="freud_two.png" />
             <div className="flex flex-col">
                 <p>
-                    Hi! My name is <span className="highlight-name">Freud</span> (pronounced 'froid' or 'frood'), but I also go by <span className="highlight-name">Kiri</span>!<br /><br />
+                    Hi! My name is Freud (pronounced 'froid' or 'frood'), but I also go by Kiri!<br /><br />
                     I'm a hobbyist illustrator who enjoys working with Vtubers on emotes, illustrations, character designs, and animations.<br /><br />
                 </p>
             </div>
