@@ -1,4 +1,4 @@
-export default function About() {
+export default function AboutLayout() {
     return (
         <div className="flex flex-col md:flex-row gap-6 items-center md:items-start">
             <img className="w-56 h-auto object-contain" src="freud_two.png" />

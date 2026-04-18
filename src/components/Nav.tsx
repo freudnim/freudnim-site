@@ -7,6 +7,7 @@ const links = [
     // { href: "/contact", label: "contact" },
     { href: "https://feebun.shop/listing/4361701114/genshin-2-acrylic-keychain-double-sided", label: "shop", external: true },
     // { href: "/featured", label: "featured" },
+    { href: "/stream", label: "stream ✦" },
 ];
 
 export default function Nav() {
