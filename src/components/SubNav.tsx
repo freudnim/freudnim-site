@@ -5,8 +5,8 @@ import { usePathname } from "next/navigation";
 
 const links = [
     { href: "/stream/gifted_art", label: "gifted art showcase" },
-    { href: "/stream/collabs", label: "collabs" },
-    { href: "/stream/charity", label: "charity" },
+    { href: "/stream/collabs", label: "collabs (wip)" },
+    { href: "/stream/charity", label: "charity (wip)" },
 ];
 
 export default function SubNav() {
