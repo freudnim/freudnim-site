@@ -1,7 +1,6 @@
 "use client";
-import {
-    TwitterIcon,
-} from "@/components/icons";
+
+import { ArtCard } from "@/components/ArtCard";
 
 const posts = [
     {
@@ -9,13 +8,30 @@ const posts = [
         url: "https://x.com/Widheim/status/1988131059683451301",
     },
     {
-        image: "/gifted_art/11-11-2023_Matcha___lattea.webp",
-        url: "https://x.com/Matcha__lattea/status/1723204056628465969",
+        image: "/gifted_art/5-22-2024_fs_kymera.webp",
+        url: "https://x.com/fs_kymera/status/1793272978341326994",
+    },
+    {
+        image: "/gifted_art/3-27-2025_AzaleaArchives.webp",
+        url: "https://x.com/AzaleaArchives/status/1905213535313117212",
+    },
+    {
+        image: "/gifted_art/3-4-2026_LoyallyBear.webp",
+        url: "https://x.com/cowboypony/status/2029279826952032464",
+    },
+    {
+        image: "/gifted_art/11-12-2022_fancy_plantsy.webp",
+        url: "https://x.com/fancy_plantsy/status/1591335094719217665",
     },
     {
         image: "/gifted_art/9-27-2023_AzaleaArchivist.webp",
         url: "https://x.com/AzaleaArchivist/status/1707126516000371064/",
     },
+    {
+        image: "/gifted_art/11-11-2023_Matcha___lattea.webp",
+        url: "https://x.com/Matcha__lattea/status/1723204056628465969",
+    },
+
     {
         image: "/gifted_art/5-20-2023_BloodyCaffeine.webp",
         url: "https://x.com/BloodyCaffeine/status/1659795380220088320",
@@ -44,10 +60,6 @@ const posts = [
     {
         image: "/gifted_art/12-15-2023_meeshchannel.webp",
         url: "https://x.com/meeshchannel/status/1735726965720506730",
-    },
-    {
-        image: "/gifted_art/11-12-2022_fancy_plantsy.webp",
-        url: "https://x.com/fancy_plantsy/status/1591335094719217665",
     },
     {
         image: "/gifted_art/11-11-2023_meeshchannel.webp",
@@ -161,18 +173,6 @@ const posts = [
         image: "/gifted_art/2-23-2024_BloodyCaffeine.webp",
         url: "https://x.com/BloodyCaffeine/status/1761092478244139384",
     },
-    {
-        image: "/gifted_art/5-22-2024_fs_kymera.webp",
-        url: "https://x.com/fs_kymera/status/1793272978341326994",
-    },
-    {
-        image: "/gifted_art/3-27-2025_AzaleaArchives.webp",
-        url: "https://x.com/AzaleaArchives/status/1905213535313117212",
-    },
-    {
-        image: "/gifted_art/3-4-2026_LoyallyBear.webp",
-        url: "https://x.com/cowboypony/status/2029279826952032464",
-    },
     // {
     //     image: "/gifted_art/.webp",
     //     url: "",
@@ -183,27 +183,7 @@ export default function GiftedArtPage() {
     return (
         <div className="columns-2 sm:columns-3 gap-4 space-y-4">
             {posts.map((post, i) => (
-                <a
-                    key={i}
-                    href={post.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="block break-inside-avoid group"
-                >
-                    <div className="relative">
-                        <img
-                            src={post.image}
-                            alt="gifted art"
-                            className="w-full rounded-lg transition-transform duration-200 group-hover:scale-[1.02]"
-                        />
-
-                        {/* twitter overlay */}
-                        {/* twitter overlay */}
-                        <div className="absolute bottom-2 right-2 opacity-80 group-hover:opacity-100 transition text-blue-500">
-                            <TwitterIcon className="w-4 h-4 drop-shadow" />
-                        </div>
-                    </div>
-                </a>
+                <ArtCard key={i} post={post} />
             ))}
         </div>
     );
