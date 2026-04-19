@@ -54,7 +54,7 @@ const posts = [
         url: "https://x.com/BloodyCaffeine/status/1723367894292062504",
     },
     {
-        image: "/gifted_art/12-25-2023__BloodyCaffeine.webp",
+        image: "/gifted_art/12-25-2023_BloodyCaffeine.webp",
         url: "https://x.com/BloodyCaffeine/status/1739379628081655979",
     },
     {
@@ -172,6 +172,14 @@ const posts = [
     {
         image: "/gifted_art/2-23-2024_BloodyCaffeine.webp",
         url: "https://x.com/BloodyCaffeine/status/1761092478244139384",
+    },
+    {
+        image: "/gifted_art/10-21-2024_sitrusvt.webp",
+        url: "https://bsky.app/profile/sitrusvt.vtubers.social/post/3l732lqwoyu26",
+    },
+    {
+        image: "/gifted_art/11-10-2024_widheim.webp",
+        url: "https://bsky.app/profile/widheim.bsky.social/post/3lam7sy6xrr2w",
     },
     // {
     //     image: "/gifted_art/.webp",
