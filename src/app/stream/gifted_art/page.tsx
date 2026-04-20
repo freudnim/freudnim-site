@@ -181,6 +181,18 @@ const posts = [
         image: "/gifted_art/11-10-2024_widheim.webp",
         url: "https://bsky.app/profile/widheim.bsky.social/post/3lam7sy6xrr2w",
     },
+    {
+        image: "/gifted_art/11-11-2022_kudoboard.webp",
+        url: "https://www.kudoboard.com/boards/sGDiFSXw/",
+    },
+    {
+        image: "/gifted_art/11-11-2023_kudoboard.webp",
+        url: "https://www.kudoboard.com/boards/YE9s50pH",
+    },
+    {
+        image: "/gifted_art/11-11-2025_padlet.webp",
+        url: "https://padlet.com/matchalattea1015/freud-s-birthday-bnhhkenz8gd9jla5",
+    },
     // {
     //     image: "/gifted_art/.webp",
     //     url: "",
