@@ -1,8 +1,9 @@
-import { useState } from "react";
+"use client";
+
+import Image from "next/image";
 import { TwitterIcon, BlueskyIcon } from "@/components/icons";
 
 export function ArtCard({ post }: { post: any }) {
-    const [loaded, setLoaded] = useState(false);
     const platform = getPlatform(post.url);
 
     return (
@@ -13,16 +14,16 @@ export function ArtCard({ post }: { post: any }) {
             className="block break-inside-avoid group"
         >
             <div className="relative">
-                <img
+                <Image
                     src={post.image}
                     alt="gifted art"
-                    onLoad={() => setLoaded(true)}
-                    className={`w-full rounded-lg transition-transform duration-200 group-hover:scale-[1.02] ${loaded ? "opacity-100" : "opacity-0"
-                        }`}
+                    width={800}
+                    height={800}
+                    className="w-full h-auto rounded-lg transition-transform duration-200 group-hover:scale-[1.02]"
                 />
 
                 {/* social watermark overlay */}
-                {loaded && (
+                {platform && (
                     <div className="absolute bottom-2 right-2 opacity-80 group-hover:opacity-100 transition text-blue-600">
                         {platform === "twitter" && (
                             <TwitterIcon className="w-4 h-4 drop-shadow" />
@@ -33,7 +34,7 @@ export function ArtCard({ post }: { post: any }) {
                     </div>
                 )}
 
-                {/* gray overlay for kudoboard */}
+                {/* gray overlay for kudoboard / padlet */}
                 {(platform === "kudoboard" || platform === "padlet") && (
                     <>
                         <div className="absolute inset-0 bg-black/70 z-10 pointer-events-none rounded-lg transition-transform duration-200 group-hover:scale-[1.02]" />
