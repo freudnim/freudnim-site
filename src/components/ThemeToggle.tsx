@@ -4,7 +4,7 @@ import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 
 export default function ThemeToggle() {
-    const { theme, setTheme } = useTheme();
+    const { setTheme, resolvedTheme } = useTheme();
     const [mounted, setMounted] = useState(false);
 
     // render only after mounting to avoid hydration mismatch
@@ -14,12 +14,14 @@ export default function ThemeToggle() {
 
     if (!mounted) return null;
 
+    const currentTheme = resolvedTheme;
+
     return (
         <button
-            onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+            onClick={() => setTheme(currentTheme === "dark" ? "light" : "dark")}
             className="fixed top-4 left-4 p-2 transform transition hover:scale-110 duration-300 z-50"
         >
-            {theme === "dark" ?
+            {currentTheme === "dark" ?
                 <img className="w-10" src="/moon.png" /> :
                 <img className="w-10" src="/sun.png" />
             }
