@@ -6,6 +6,7 @@ const nextConfig = {
     assetPrefix: ".",
   }),
   trailingSlash: true,
+  assetPrefix: "/",
   images: {
     unoptimized: true,
   },
