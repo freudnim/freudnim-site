@@ -12,7 +12,7 @@ export default function AboutLayout() {
                         href="http://freudnim.co/ref"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="opacity-70 hover:opacity-100 transition-all duration-200 text-blue-800"
+                        className="opacity-70 hover:opacity-100 transition-all duration-200 link"
                     >
                         Ref sheet </Link><br /><br />
                     Email: freud.nim@gmail.com
