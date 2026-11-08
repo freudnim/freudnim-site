@@ -39,23 +39,6 @@ export default function ArtLayout() {
 
             <br />
             <h2>
-                Animated Emotes
-            </h2>
-            <div className="relative tab-group">
-                <div className="mt-4">
-                    <div className="tab-content text-slate-500 text-sm block grid grid-cols-2 gap-4 md:grid-cols-3">
-                        <div><img className="h-50 w-full max-w-full rounded-lg object-cover object-center" src="/art/animated_emotes/coraNoted.webp" alt="image-photo" /></div>
-                        <div><img className="h-50 w-full max-w-full rounded-lg object-cover object-center" src="/art/animated_emotes/kiroVibe.webp" alt="image-photo" /></div>
-                        <div><img className="h-50 w-full max-w-full rounded-lg object-cover object-center" src="/art/animated_emotes/meeshPew_500px.webp" alt="image-photo" /></div>
-                        <div><img className="h-50 w-full max-w-full rounded-lg object-cover object-center" src="/art/animated_emotes/nhanScheme.webp" alt="image-photo" /></div>
-                        <div><img className="h-50 w-full max-w-full rounded-lg object-cover object-center" src="/art/animated_emotes/phanNopers.webp" alt="image-photo" /></div>
-                        <div><img className="h-50 w-full max-w-full rounded-lg object-cover object-center" src="/art/animated_emotes/phanRun.webp" alt="image-photo" /></div>
-                    </div>
-                </div>
-            </div>
-
-            <br />
-            <h2>
                 Original Design
             </h2>
             <div className="relative tab-group">
