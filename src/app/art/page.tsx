@@ -44,12 +44,12 @@ export default function ArtLayout() {
             <div className="relative tab-group">
                 <div className="mt-4">
                     <div className="tab-content text-slate-500 text-sm block grid grid-cols-2 gap-4 md:grid-cols-3">
-                        <div><img className="h-50 w-full max-w-full rounded-lg object-cover object-center" src="/art/animated_emotes/coraNoted.gif" alt="image-photo" /></div>
-                        <div><img className="h-50 w-full max-w-full rounded-lg object-cover object-center" src="/art/animated_emotes/kiroVibe.gif" alt="image-photo" /></div>
-                        <div><img className="h-50 w-full max-w-full rounded-lg object-cover object-center" src="/art/animated_emotes/meeshPew_500px.gif" alt="image-photo" /></div>
-                        <div><img className="h-50 w-full max-w-full rounded-lg object-cover object-center" src="/art/animated_emotes/nhanScheme.gif" alt="image-photo" /></div>
-                        <div><img className="h-50 w-full max-w-full rounded-lg object-cover object-center" src="/art/animated_emotes/phanNopers.gif" alt="image-photo" /></div>
-                        <div><img className="h-50 w-full max-w-full rounded-lg object-cover object-center" src="/art/animated_emotes/phanRun.gif" alt="image-photo" /></div>
+                        <div><img className="h-50 w-full max-w-full rounded-lg object-cover object-center" src="/art/animated_emotes/coraNoted.webp" alt="image-photo" /></div>
+                        <div><img className="h-50 w-full max-w-full rounded-lg object-cover object-center" src="/art/animated_emotes/kiroVibe.webp" alt="image-photo" /></div>
+                        <div><img className="h-50 w-full max-w-full rounded-lg object-cover object-center" src="/art/animated_emotes/meeshPew_500px.webp" alt="image-photo" /></div>
+                        <div><img className="h-50 w-full max-w-full rounded-lg object-cover object-center" src="/art/animated_emotes/nhanScheme.webp" alt="image-photo" /></div>
+                        <div><img className="h-50 w-full max-w-full rounded-lg object-cover object-center" src="/art/animated_emotes/phanNopers.webp" alt="image-photo" /></div>
+                        <div><img className="h-50 w-full max-w-full rounded-lg object-cover object-center" src="/art/animated_emotes/phanRun.webp" alt="image-photo" /></div>
                     </div>
                 </div>
             </div>
