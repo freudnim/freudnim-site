@@ -1,13 +1,17 @@
 import Image from "next/image";
 
 const ImageItem = ({ src }: { src: string }) => (
-    <Image
-        src={src}
-        alt="showcase art"
-        width={800}
-        height={800}
-        className="w-full h-auto rounded-lg transition-transform duration-200 group-hover:scale-[1.02]"
-    />
+    <div>
+        <a href={src} target="_blank" rel="noopener noreferrer">
+            <Image
+                src={src}
+                alt="showcase art"
+                width={800}
+                height={800}
+                className="w-full h-auto rounded-lg transition-transform duration-200 group-hover:scale-[1.02]"
+            />
+        </a>
+    </div>
 );
 
 export default function ArtLayout() {
