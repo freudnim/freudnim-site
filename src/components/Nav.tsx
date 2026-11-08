@@ -3,6 +3,7 @@ import Link from "next/link";
 const links = [
     { href: "/", label: "home" },
     { href: "/about", label: "about" },
+    { href: "/art", label: "art", highlight: true },
     { href: "/stream", label: "stream", highlight: true },
     { href: "https://vgen.co/freudnim", label: "comms", external: true },
     { href: "https://feebun.shop/listing/4361701114/genshin-2-acrylic-keychain-double-sided", label: "shop", external: true },

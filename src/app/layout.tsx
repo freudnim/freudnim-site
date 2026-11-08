@@ -4,6 +4,7 @@ import { ThemeProvider } from "next-themes";
 import ThemeToggle from "@/components/ThemeToggle";
 import Footer from "../components/Footer";
 import Nav from "@/components/Nav";
+import Script from "next/script";
 
 export const metadata: Metadata = {
   title: "freudnim",
@@ -17,6 +18,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <Script
+          src="https://unpkg.com/@material-tailwind/html@3.0.0-beta.7/dist/material-tailwind.umd.min.js"
+          strategy="afterInteractive"
+        />
+      </head>
       <body>
         <ThemeProvider defaultTheme="system" enableSystem={true}>
           <div className="flex min-h-screen flex-col font-sans background">
